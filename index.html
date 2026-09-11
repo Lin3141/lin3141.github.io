@@ -2,409 +2,359 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Lingxin Chen — LLM Engineer & Full Stack Software Engineer. MSCS candidate at Vanderbilt University building provider-agnostic AI systems and cloud infrastructure.">
-    <title>Lingxin Chen — LLM &amp; Full Stack Software Engineer</title>
-    <link rel="stylesheet" href="styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Lingxin Chen — LLM &amp; Full-Stack Engineer</title>
+    <meta name="description" content="Lingxin Chen builds dependable LLM systems, cloud infrastructure, and the software around them. Master's student in Computer Science at Vanderbilt University.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://lin3141.github.io/">
+    <meta property="og:title" content="Lingxin Chen — LLM &amp; Full-Stack Engineer">
+    <meta property="og:description" content="Dependable LLM systems, cloud infrastructure, and the software around them.">
+    <meta property="og:image" content="https://lin3141.github.io/profileimg.jpeg">
+    <meta name="theme-color" content="#f4f1ea" media="(prefers-color-scheme: light)">
+    <meta name="theme-color" content="#11100e" media="(prefers-color-scheme: dark)">
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%231b1a17'/%3E%3Cpath d='M20 42 40 20l6 26z' fill='none' stroke='%23f4f1ea' stroke-width='2.5' stroke-linejoin='round'/%3E%3Ccircle cx='20' cy='42' r='5' fill='%23f4f1ea'/%3E%3Ccircle cx='40' cy='20' r='5' fill='%23f4f1ea'/%3E%3Ccircle cx='46' cy='46' r='5' fill='%23ff7a3d'/%3E%3C/svg%3E">
+    <script>
+        document.documentElement.classList.add('js');
+        try {
+            var t = localStorage.getItem('theme');
+            if (t === 'light' || t === 'dark') document.documentElement.dataset.theme = t;
+        } catch (e) {}
+    </script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&family=Geist+Mono:wght@400;500&family=Instrument+Serif:ital@0;1&display=swap">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="noise-overlay"></div>
+    <a class="skip-link" href="#main">Skip to content</a>
 
-    <!-- Navigation -->
-    <nav class="navbar" id="navbar">
-        <div class="nav-container">
-            <a href="#home" class="nav-logo">LC<span class="dot">.</span></a>
+    <div class="mobile-bar" id="mobile-bar" inert>
+        <a href="#top" class="mobile-bar-name">Lingxin <em>Chen</em></a>
+        <button type="button" class="mobile-bar-menu" data-open-palette>Menu</button>
+    </div>
 
-            <ul class="nav-menu" id="nav-menu">
-                <li><a href="#home" class="nav-link">Home</a></li>
-                <li><a href="#experience" class="nav-link">Experience</a></li>
-                <li><a href="#education" class="nav-link">Education</a></li>
-                <li><a href="#projects" class="nav-link">Projects</a></li>
-                <li><a href="#awards" class="nav-link">Awards</a></li>
-                <li><a href="#skills" class="nav-link">Skills</a></li>
-                <li><a href="#contact" class="nav-link">Contact</a></li>
-            </ul>
+    <div class="layout" id="top">
+        <header class="intro" id="intro">
+            <canvas class="graph" id="graph" aria-hidden="true"></canvas>
 
-            <div class="nav-actions">
-                <button class="theme-toggle" id="theme-toggle" aria-label="Toggle color theme">
-                    <i class="fas fa-sun"></i>
-                    <i class="fas fa-moon"></i>
-                </button>
-                <button class="mobile-menu" id="mobile-menu" aria-label="Toggle navigation menu">
-                    <span></span><span></span><span></span>
-                </button>
+            <div class="intro-top">
+                <img class="avatar" src="profileimg.jpeg" alt="Lingxin Chen" width="400" height="400">
+                <h1 class="name">Lingxin <em>Chen</em></h1>
+                <p class="role">LLM &amp; Full-Stack Engineer</p>
+                <p class="tagline">I build dependable LLM systems, cloud infrastructure, and the software around them. Currently a Master's student in Computer Science at Vanderbilt.</p>
+
+                <nav class="toc" aria-label="Sections">
+                    <ol>
+                        <li><a href="#about" data-section="about"><span class="toc-num">01</span><span class="toc-bar"></span><span class="toc-label">About</span></a></li>
+                        <li><a href="#experience" data-section="experience"><span class="toc-num">02</span><span class="toc-bar"></span><span class="toc-label">Experience</span></a></li>
+                        <li><a href="#projects" data-section="projects"><span class="toc-num">03</span><span class="toc-bar"></span><span class="toc-label">Projects</span></a></li>
+                        <li><a href="#awards" data-section="awards"><span class="toc-num">04</span><span class="toc-bar"></span><span class="toc-label">Awards</span></a></li>
+                        <li><a href="#education" data-section="education"><span class="toc-num">05</span><span class="toc-bar"></span><span class="toc-label">Education</span></a></li>
+                        <li><a href="#skills" data-section="skills"><span class="toc-num">06</span><span class="toc-bar"></span><span class="toc-label">Skills</span></a></li>
+                        <li><a href="#contact" data-section="contact"><span class="toc-num">07</span><span class="toc-bar"></span><span class="toc-label">Contact</span></a></li>
+                    </ol>
+                </nav>
             </div>
-        </div>
-    </nav>
 
-    <!-- Hero Section -->
-    <section id="home" class="hero">
-        <div class="hero-bg" aria-hidden="true">
-            <div class="aurora aurora-1"></div>
-            <div class="aurora aurora-2"></div>
-            <div class="aurora aurora-3"></div>
-            <div class="grid-overlay"></div>
-        </div>
-
-        <div class="container hero-container">
-            <div class="hero-content">
-                <div class="hero-text">
-                    <p class="hero-eyebrow reveal"><span class="pulse-dot"></span> Open to new opportunities</p>
-                    <h1 class="hero-name reveal">Hi, I'm Lingxin Chen</h1>
-                    <h2 class="hero-role reveal">
-                        <span class="role-cycle" id="role-cycle"></span><span class="cursor-blink">|</span>
-                    </h2>
-                    <p class="hero-bio reveal">
-                        MSCS candidate at Vanderbilt University building provider-agnostic LLM systems,
-                        scalable cloud infrastructure, and human-centered software that's shipped to
-                        10,000+ real users.
-                    </p>
-                    <div class="hero-buttons reveal">
-                        <a href="Lingxin_Chen_Resume.pdf" target="_blank" class="btn btn-primary">
-                            <i class="fas fa-file-arrow-down"></i> Resume
-                        </a>
-                        <a href="https://github.com/Lin3141" target="_blank" class="btn btn-secondary">
-                            <i class="fab fa-github"></i> GitHub
-                        </a>
-                        <a href="https://www.linkedin.com/in/lingxin-chen-b65912184/" target="_blank" class="btn btn-secondary">
-                            <i class="fab fa-linkedin"></i> LinkedIn
-                        </a>
-                    </div>
+            <div class="intro-bottom">
+                <p class="fig-caption"><span class="fig-label">Fig. 1</span> A live neighborhood graph, a nod to my GNN research. Click it to pass a message along its edges.</p>
+                <div class="intro-links">
+                    <a href="https://github.com/Lin3141" target="_blank" rel="noopener" aria-label="GitHub">
+                        <svg viewBox="0 0 16 16" aria-hidden="true"><path fill="currentColor" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
+                    </a>
+                    <a href="https://www.linkedin.com/in/lingxin-chen-b65912184/" target="_blank" rel="noopener" aria-label="LinkedIn">
+                        <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M20.45 20.45h-3.55v-5.57c0-1.33-.02-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.36V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg>
+                    </a>
+                    <a href="mailto:lingxinchen223@gmail.com" aria-label="Email">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3.5 6.5 8.5 6.5 8.5-6.5"/></svg>
+                    </a>
+                    <a href="Lingxin_Chen_Resume.pdf" target="_blank" rel="noopener" class="resume-link">Résumé
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg>
+                    </a>
+                    <span class="spacer"></span>
+                    <button type="button" class="icon-btn" id="theme-toggle" aria-label="Toggle dark mode">
+                        <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 14.5A8 8 0 1 1 9.5 4a6.5 6.5 0 0 0 10.5 10.5z"/></svg>
+                        <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
+                    </button>
+                    <button type="button" class="kbd-btn" data-open-palette aria-label="Open command menu">
+                        <span class="kbd-desktop"><kbd class="kbd-mod">⌘</kbd><kbd>K</kbd></span>
+                        <span class="kbd-touch">Menu</span>
+                    </button>
                 </div>
+            </div>
+        </header>
 
-                <div class="hero-image reveal">
-                    <div class="profile-ring">
-                        <div class="profile-image">
-                            <img src="profileimg.jpeg" alt="Lingxin Chen" loading="eager">
+        <main class="content" id="main">
+            <section class="section" id="about" aria-labelledby="about-title">
+                <h2 class="section-label" id="about-title"><span class="idx">01</span>About</h2>
+                <div class="prose">
+                    <p>I like the parts of AI systems that make them dependable in production: request batching, persistence, and the configuration layers that keep model output reproducible across providers.</p>
+                    <p>Right now I'm building LLM infrastructure at <strong>HLAB</strong>, researching graph neural networks at <strong>Vanderbilt</strong>, and shipping serverless video pipelines with the <strong>Cloud Innovation Lab with Amazon</strong>. Before grad school I spent almost three years at <strong>SIL Global</strong> working on Paratext, a translation editor used by more than 10,000 people.</p>
+                </div>
+                <dl class="numbers">
+                    <div><dt>~50%</dt><dd>lower LLM inference cost after moving bulk generation to Anthropic's Batches API</dd></div>
+                    <div><dt>4×</dt><dd>faster graph neural network training on a 395K-cell dataset</dd></div>
+                    <div><dt>120+</dt><dd>full-stack issues resolved at SIL, with reported bugs down 30%</dd></div>
+                    <div><dt>$0</dt><dd>idle spend on the scale-to-zero AWS stack I deployed</dd></div>
+                </dl>
+            </section>
+
+            <section class="section" id="experience" aria-labelledby="experience-title">
+                <div class="section-head">
+                    <h2 class="section-label" id="experience-title"><span class="idx">02</span>Experience</h2>
+                    <button type="button" class="text-btn" id="expand-all">Expand all</button>
+                </div>
+                <ol class="jobs">
+                    <li class="job" data-open>
+                        <button type="button" class="job-head" aria-expanded="true" aria-controls="job-hlab">
+                            <span class="job-date">May 2026 – <span class="now">Now</span></span>
+                            <span class="job-title">LLM Engineer<span class="at">HLAB</span></span>
+                            <span class="job-summary">LLM generation infrastructure for bulk document workflows.</span>
+                            <span class="job-toggle" aria-hidden="true"></span>
+                        </button>
+                        <div class="job-body" id="job-hlab">
+                            <div class="job-body-inner">
+                                <ul>
+                                    <li>Architected a provider-agnostic generation client for Anthropic, OpenAI, and Google models, with a factory-based registry, asyncio request batching, and MySQL persistence.</li>
+                                    <li>Built a model-aware decoding-config layer that standardizes sampling controls across providers, preventing production API errors and keeping output reproducible across models.</li>
+                                    <li>Cut inference cost by ~50% by making Anthropic's Batches API the primary scaling path for bulk generation, alongside prompt optimization.</li>
+                                </ul>
+                                <p class="tags">Python · asyncio · MySQL · Anthropic · OpenAI · Google</p>
+                            </div>
                         </div>
-                    </div>
-                </div>
-            </div>
+                    </li>
 
-            <div class="scroll-indicator" aria-hidden="true">
-                <span>Scroll</span>
-                <div class="mouse"><div class="wheel"></div></div>
+                    <li class="job">
+                        <button type="button" class="job-head" aria-expanded="false" aria-controls="job-vu">
+                            <span class="job-date">Nov 2025 – <span class="now">Now</span></span>
+                            <span class="job-title">Research Assistant<span class="at">Vanderbilt College of Connected Computing</span></span>
+                            <span class="job-summary">Graph neural network experiments on 395K-cell datasets.</span>
+                            <span class="job-toggle" aria-hidden="true"></span>
+                        </button>
+                        <div class="job-body" id="job-vu">
+                            <div class="job-body-inner">
+                                <ul>
+                                    <li>Engineered experimental workflows for graph neural networks on 395K-cell datasets, speeding up training 4× through iterative hyperparameter tuning and architectural refinement.</li>
+                                    <li>Led a systematic evaluation of state-of-the-art baselines, using statistical validation to identify and correct transductive bias so reported metrics are robust and reproducible.</li>
+                                </ul>
+                                <p class="tags">Graph neural networks · Benchmarking · Statistical validation</p>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="job">
+                        <button type="button" class="job-head" aria-expanded="false" aria-controls="job-cil">
+                            <span class="job-date">Mar 2025 – <span class="now">Now</span></span>
+                            <span class="job-title">Cloud Engineer<span class="at">Cloud Innovation Lab with Amazon</span></span>
+                            <span class="job-summary">Serverless AWS pipelines that split long video into semantic segments.</span>
+                            <span class="job-toggle" aria-hidden="true"></span>
+                        </button>
+                        <div class="job-body" id="job-cil">
+                            <div class="job-body-inner">
+                                <ul>
+                                    <li>Automated video segmentation with Bedrock, Transcribe, and PySceneDetect, combining lexical and visual signals to turn 30-minute tapes into 25 semantic segments.</li>
+                                    <li>Deployed AWS infrastructure (S3, Lambda, ECS) that scales to zero, keeping spend at $0 when idle.</li>
+                                </ul>
+                                <p class="tags">Bedrock · Transcribe · Lambda · ECS · S3 · PySceneDetect</p>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="job">
+                        <button type="button" class="job-head" aria-expanded="false" aria-controls="job-sil">
+                            <span class="job-date">Aug 2022 – May 2025</span>
+                            <span class="job-title">Full Stack Software Engineer<span class="at">SIL Global</span></span>
+                            <span class="job-summary">Features and reliability work on Paratext 9.4–9.6.</span>
+                            <span class="job-toggle" aria-hidden="true"></span>
+                        </button>
+                        <div class="job-body" id="job-sil">
+                            <div class="job-body-inner">
+                                <ul>
+                                    <li>Shipped 10+ major features across Paratext 9.4–9.6 (C#/.NET), reaching 10,000+ users.</li>
+                                    <li>Resolved 120+ full-stack issues by cleaning up data flow and adding health checks, cutting reported bugs by 30%.</li>
+                                    <li>Stabilized the TeamCity CI/CD pipeline and raised unit test coverage.</li>
+                                </ul>
+                                <p class="tags">C# · .NET · TeamCity · CI/CD</p>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="job">
+                        <button type="button" class="job-head" aria-expanded="false" aria-controls="job-jaars">
+                            <span class="job-date">Jun – Aug 2022</span>
+                            <span class="job-title">Software Engineer Intern<span class="at">Jaars</span></span>
+                            <span class="job-summary">Led a three-person team building a QA platform for 2,000+ users.</span>
+                            <span class="job-toggle" aria-hidden="true"></span>
+                        </button>
+                        <div class="job-body" id="job-jaars">
+                            <div class="job-body-inner">
+                                <ul>
+                                    <li>Led a team of 3 building a QA platform for 2,000+ users, with 11 plugin integrations and OAuth 2.0.</li>
+                                    <li>Migrated 1,000+ records from Postgres to MySQL with zero data loss.</li>
+                                    <li>Deployed the full stack with Docker, Kubernetes, and AWS at 99.9% uptime.</li>
+                                </ul>
+                                <p class="tags">OAuth 2.0 · MySQL · Docker · Kubernetes · AWS</p>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="job">
+                        <button type="button" class="job-head" aria-expanded="false" aria-controls="job-bank">
+                            <span class="job-date">Jun – Aug 2021</span>
+                            <span class="job-title">Software Developer Intern<span class="at">Yuhuan Rural Commercial Bank</span></span>
+                            <span class="job-summary">Cross-platform employee portal for 2,000+ users.</span>
+                            <span class="job-toggle" aria-hidden="true"></span>
+                        </button>
+                        <div class="job-body" id="job-bank">
+                            <div class="job-body-inner">
+                                <ul>
+                                    <li>Built a cross-platform employee portal in React and Node.js for 2,000+ users, cutting load time by 40%.</li>
+                                </ul>
+                                <p class="tags">React · Node.js</p>
+                            </div>
+                        </div>
+                    </li>
+                </ol>
+            </section>
+
+            <section class="section" id="projects" aria-labelledby="projects-title">
+                <h2 class="section-label" id="projects-title"><span class="idx">03</span>Projects</h2>
+                <ul class="projects">
+                    <li class="project-item">
+                        <a class="project" href="https://github.com/Lin3141/baby-food-rag" target="_blank" rel="noopener" data-cursor="View code ↗">
+                            <span class="project-num">01</span>
+                            <span class="project-main">
+                                <span class="project-name">Baby Food RAG Assistant</span>
+                                <span class="project-desc">Evidence-based answers about infant nutrition. Hybrid BM25 and vector retrieval over USDA data, with confidence scores and citations.</span>
+                                <span class="tags">FastAPI · Hybrid search · RAG</span>
+                            </span>
+                            <svg class="project-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg>
+                        </a>
+                    </li>
+                    <li class="project-item">
+                        <a class="project" href="https://github.com/Lin3141/aws-serverless-pdf-qa" target="_blank" rel="noopener" data-cursor="View code ↗">
+                            <span class="project-num">02</span>
+                            <span class="project-main">
+                                <span class="project-name">Serverless Document Processing</span>
+                                <span class="project-desc">Secure direct-to-S3 uploads through presigned URLs, feeding an event-driven processing backend. React front end, infrastructure defined in AWS CDK.</span>
+                                <span class="tags">AWS CDK · Lambda · S3 · React</span>
+                            </span>
+                            <svg class="project-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg>
+                        </a>
+                    </li>
+                    <li class="project-item">
+                        <a class="project" href="https://github.com/Lin3141/Daycare-Policy-Nav" target="_blank" rel="noopener" data-cursor="View code ↗">
+                            <span class="project-num">03</span>
+                            <span class="project-main">
+                                <span class="project-name">Daycare Policy Navigator</span>
+                                <span class="project-desc">Parents scan a QR code and ask questions about their daycare's handbook. Every answer cites the page and passage it came from.</span>
+                                <span class="tags">Next.js · FastAPI · Qdrant</span>
+                            </span>
+                            <svg class="project-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg>
+                        </a>
+                    </li>
+                    <li class="project-item">
+                        <a class="project" href="https://github.com/Lin3141/assure_support_site" target="_blank" rel="noopener" data-cursor="View code ↗">
+                            <span class="project-num">04</span>
+                            <span class="project-main">
+                                <span class="project-name">Support.Bible</span>
+                                <span class="project-desc">The Q&amp;A support forum from my Jaars internship: migrated from Postgres to MySQL, added OAuth 2.0 sign-in, and redeployed with Docker on AWS.</span>
+                                <span class="tags">MySQL · OAuth 2.0 · Docker · AWS</span>
+                            </span>
+                            <svg class="project-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg>
+                        </a>
+                        <a class="project-extra" href="https://support.bible/" target="_blank" rel="noopener">Live at support.bible
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg>
+                        </a>
+                    </li>
+                </ul>
+                <a class="more-link" href="https://github.com/Lin3141?tab=repositories" target="_blank" rel="noopener">All repositories on GitHub
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg>
+                </a>
+            </section>
+
+            <section class="section" id="awards" aria-labelledby="awards-title">
+                <h2 class="section-label" id="awards-title"><span class="idx">04</span>Awards</h2>
+                <ul class="awards">
+                    <li class="award">
+                        <span class="award-amount">$10,000</span>
+                        <div class="award-body">
+                            <h3>Best Use of AWS<span class="at">Amazon Web Services</span></h3>
+                            <p>A cloud-connected disaster-response system coordinating drones and ground robots for real-time survivor detection, built on AWS Greengrass, IoT, and S3 to keep missions running on weak connections.</p>
+                            <a class="inline-link" href="https://github.com/Lin3141/earthquake-response-coordination" target="_blank" rel="noopener">Code
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg>
+                            </a>
+                        </div>
+                    </li>
+                    <li class="award">
+                        <span class="award-amount">$2,500</span>
+                        <div class="award-body">
+                            <h3>1st Place<span class="at">AiTinker 48-hour AI Hackathon</span></h3>
+                            <p>Domain Sentry, a full-stack app that automates DMCA takedowns so clients can protect their domains from copyright infringement.</p>
+                        </div>
+                    </li>
+                </ul>
+            </section>
+
+            <section class="section" id="education" aria-labelledby="education-title">
+                <h2 class="section-label" id="education-title"><span class="idx">05</span>Education</h2>
+                <ul class="rows">
+                    <li class="row">
+                        <span class="row-key">2025 – 2027</span>
+                        <div>
+                            <h3>Master's in Computer Science</h3>
+                            <p>Vanderbilt University</p>
+                        </div>
+                    </li>
+                    <li class="row">
+                        <span class="row-key">2018 – 2022</span>
+                        <div>
+                            <h3>Bachelor's in Computer Science, <em>cum laude</em></h3>
+                            <p>Wheaton College</p>
+                        </div>
+                    </li>
+                </ul>
+            </section>
+
+            <section class="section" id="skills" aria-labelledby="skills-title">
+                <h2 class="section-label" id="skills-title"><span class="idx">06</span>Skills</h2>
+                <dl class="rows">
+                    <div class="row"><dt class="row-key">Languages</dt><dd>Python, Java, C#, TypeScript, JavaScript, SQL (PostgreSQL, MySQL), Swift</dd></div>
+                    <div class="row"><dt class="row-key">AI &amp; ML</dt><dd>PyTorch, scikit-learn, NumPy, LLMs (RAG, prompt engineering, LangChain), deep learning</dd></div>
+                    <div class="row"><dt class="row-key">Cloud</dt><dd>AWS (EC2, S3, Lambda, ECS, Bedrock), Docker, Kubernetes, CI/CD, Git</dd></div>
+                    <div class="row"><dt class="row-key">Backend</dt><dd>Node.js, FastAPI, .NET, RESTful APIs, OAuth 2.0, Agile/Scrum</dd></div>
+                </dl>
+            </section>
+
+            <section class="section contact" id="contact" aria-labelledby="contact-title">
+                <h2 class="section-label" id="contact-title"><span class="idx">07</span>Contact</h2>
+                <p class="contact-lead">The quickest way to reach me is email.</p>
+                <a class="email" id="email" href="mailto:lingxinchen223@gmail.com"><span class="email-text">lingxinchen223@gmail.com</span></a>
+                <p class="email-hint" id="email-hint" aria-live="polite"></p>
+                <p class="contact-alt">Or find me on <a href="https://www.linkedin.com/in/lingxin-chen-b65912184/" target="_blank" rel="noopener">LinkedIn</a> and <a href="https://github.com/Lin3141" target="_blank" rel="noopener">GitHub</a>.</p>
+            </section>
+
+            <footer class="footer">
+                <p>© <span id="year">2026</span> Lingxin Chen</p>
+                <p class="footer-hint">Press <kbd class="kbd-mod">⌘</kbd> <kbd>K</kbd> to jump anywhere</p>
+            </footer>
+        </main>
+    </div>
+
+    <div class="cursor-pill" id="cursor-pill" aria-hidden="true"><span></span></div>
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+    <div class="palette" id="palette" hidden>
+        <div class="palette-backdrop" data-close-palette></div>
+        <div class="palette-panel" role="dialog" aria-modal="true" aria-label="Command menu">
+            <div class="palette-search">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+                <input id="palette-input" type="text" role="combobox" aria-expanded="true" aria-controls="palette-list" aria-autocomplete="list" placeholder="Jump to a section or run a command…" autocomplete="off" spellcheck="false">
+                <kbd>esc</kbd>
             </div>
+            <ul class="palette-list" id="palette-list" role="listbox" aria-label="Commands"></ul>
         </div>
-
-        <!-- Stats strip -->
-        <div class="stats-strip reveal">
-            <div class="container stats-grid">
-                <div class="stat-item">
-                    <span class="stat-number" data-target="10" data-suffix="K+">0</span>
-                    <span class="stat-label">Users Impacted</span>
-                </div>
-                <div class="stat-item">
-                    <span class="stat-number" data-target="120" data-suffix="+">0</span>
-                    <span class="stat-label">Full-Stack Issues Resolved</span>
-                </div>
-                <div class="stat-item">
-                    <span class="stat-number" data-target="50" data-suffix="%">0</span>
-                    <span class="stat-label">LLM Inference Cost Cut</span>
-                </div>
-                <div class="stat-item">
-                    <span class="stat-number" data-target="4" data-suffix="x">0</span>
-                    <span class="stat-label">Faster Model Training</span>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Experience Section -->
-    <section id="experience" class="experience">
-        <div class="container">
-            <p class="section-kicker reveal">01 <span>/</span> Where I've worked</p>
-            <h2 class="section-title reveal">Experience</h2>
-
-            <div class="timeline" id="timeline">
-                <div class="timeline-track"><div class="timeline-progress" id="timeline-progress"></div></div>
-
-                <div class="timeline-item reveal">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-content spotlight-card">
-                        <span class="timeline-date">May 2026 – Present</span>
-                        <h3>LLM Engineer</h3>
-                        <h4>HLAB</h4>
-                        <ul>
-                            <li>Architected a provider-agnostic LLM generation client (Anthropic, OpenAI, Google) with a factory-based registry, asyncio request batching, and MySQL persistence.</li>
-                            <li>Engineered a model-aware decoding-config layer to standardize sampling controls across providers, preventing production API errors and ensuring cross-model reproducibility.</li>
-                            <li>Reduced inference costs by ~50% by integrating Anthropic's Batches API as the primary scaling path for bulk document generation.</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="timeline-item reveal">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-content spotlight-card">
-                        <span class="timeline-date">Nov 2025 – Present</span>
-                        <h3>Research Assistant</h3>
-                        <h4>Vanderbilt College of Connected Computing</h4>
-                        <ul>
-                            <li>Engineered experimental workflows for Graph Neural Networks on 395K-cell datasets, improving training efficiency 4x through iterative hyperparameter tuning and architectural refinement.</li>
-                            <li>Led a systematic evaluation of state-of-the-art baselines with rigorous statistical validation, identifying and correcting transductive bias to ensure reproducible metrics.</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="timeline-item reveal">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-content spotlight-card">
-                        <span class="timeline-date">Mar 2025 – Present</span>
-                        <h3>Cloud Engineer</h3>
-                        <h4>Cloud Innovation Lab with Amazon</h4>
-                        <ul>
-                            <li>Automated video segmentation using Bedrock, Transcribe, and PySceneDetect, combining lexical and visual signal to reduce 30-minute tapes into 25 semantic segments.</li>
-                            <li>Deployed cost-effective AWS infrastructure (S3, Lambda, ECS) that scales to zero, keeping infrastructure spend at $0 when idle.</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="timeline-item reveal">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-content spotlight-card">
-                        <span class="timeline-date">Aug 2022 – May 2025</span>
-                        <h3>Full Stack Software Engineer</h3>
-                        <h4>SIL Global</h4>
-                        <ul>
-                            <li>Shipped 10+ major features for Paratext 9.4–9.6 (C#/.NET), directly impacting 10,000+ users.</li>
-                            <li>Debugged and resolved 120+ full-stack issues by cleaning up data flow and adding health checks, cutting reported bugs by 30%.</li>
-                            <li>Stabilized the CI/CD pipeline (TeamCity) and increased unit test coverage to improve overall reliability.</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="timeline-item reveal">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-content spotlight-card">
-                        <span class="timeline-date">Jun 2022 – Aug 2022</span>
-                        <h3>Software Engineer Intern</h3>
-                        <h4>Jaars</h4>
-                        <ul>
-                            <li>Led a team of 3 to build a QA platform for 2,000+ users, integrating 11 plugins and OAuth 2.0.</li>
-                            <li>Managed a Postgres → MySQL migration for 1,000+ records, ensuring zero data loss.</li>
-                            <li>Deployed the full stack via Docker, Kubernetes, and AWS, maintaining 99.9% uptime.</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="timeline-item reveal">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-content spotlight-card">
-                        <span class="timeline-date">Jun 2021 – Aug 2021</span>
-                        <h3>Software Developer Intern</h3>
-                        <h4>Yuhuan Rural Commercial Bank</h4>
-                        <ul>
-                            <li>Developed a cross-platform employee portal for 2,000+ users using React/Node.js, cutting load time by 40%.</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Education Section -->
-    <section id="education" class="education">
-        <div class="container">
-            <p class="section-kicker reveal">02 <span>/</span> Where I've studied</p>
-            <h2 class="section-title reveal">Education</h2>
-
-            <div class="education-grid">
-                <div class="education-card spotlight-card reveal">
-                    <div class="education-icon"><i class="fas fa-graduation-cap"></i></div>
-                    <span class="education-date">Aug 2025 – May 2027</span>
-                    <h3>Master's in Computer Science</h3>
-                    <h4>Vanderbilt University</h4>
-                </div>
-
-                <div class="education-card spotlight-card reveal">
-                    <div class="education-icon"><i class="fas fa-graduation-cap"></i></div>
-                    <span class="education-date">Aug 2018 – May 2022</span>
-                    <h3>Bachelor's in Computer Science <span class="badge-honors">cum laude</span></h3>
-                    <h4>Wheaton College</h4>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Projects Section -->
-    <section id="projects" class="projects">
-        <div class="container">
-            <p class="section-kicker reveal">03 <span>/</span> What I've built</p>
-            <h2 class="section-title reveal">Featured Projects</h2>
-
-            <div class="projects-grid">
-                <div class="project-card spotlight-card reveal">
-                    <div class="project-icon"><i class="fas fa-utensils"></i></div>
-                    <h3>Baby Food RAG Assistant</h3>
-                    <p>A retrieval-augmented Q&amp;A system for infant nutrition — hybrid BM25 + vector search over USDA data, with confidence scores and cited sources served through a FastAPI backend.</p>
-                    <div class="project-tags">
-                        <span>FastAPI</span><span>RAG</span><span>Hybrid Search</span>
-                    </div>
-                    <div class="project-links">
-                        <a href="https://github.com/Lin3141/baby-food-rag" target="_blank" class="project-link"><i class="fab fa-github"></i> Code</a>
-                    </div>
-                </div>
-
-                <div class="project-card spotlight-card reveal">
-                    <div class="project-icon"><i class="fas fa-cloud-arrow-up"></i></div>
-                    <h3>AWS Serverless Document Processing</h3>
-                    <p>An event-driven serverless stack (React + AWS CDK + Python Lambda) handling secure, direct-to-S3 presigned uploads and automated document processing pipelines.</p>
-                    <div class="project-tags">
-                        <span>AWS CDK</span><span>Lambda</span><span>S3</span>
-                    </div>
-                    <div class="project-links">
-                        <a href="https://github.com/Lin3141/aws-serverless-pdf-qa" target="_blank" class="project-link"><i class="fab fa-github"></i> Code</a>
-                    </div>
-                </div>
-
-                <div class="project-card spotlight-card reveal">
-                    <div class="project-icon"><i class="fas fa-qrcode"></i></div>
-                    <h3>Daycare Policy Navigator</h3>
-                    <p>Lets parents scan a QR code to ask questions about their daycare's handbook — answers are grounded in the uploaded PDF with page-level citations via Qdrant semantic search.</p>
-                    <div class="project-tags">
-                        <span>Next.js</span><span>FastAPI</span><span>Qdrant</span>
-                    </div>
-                    <div class="project-links">
-                        <a href="https://github.com/Lin3141/Daycare-Policy-Nav" target="_blank" class="project-link"><i class="fab fa-github"></i> Code</a>
-                    </div>
-                </div>
-
-                <div class="project-card spotlight-card reveal">
-                    <div class="project-icon"><i class="fas fa-puzzle-piece"></i></div>
-                    <h3>Support.Bible Migration</h3>
-                    <p>Migrated a live QA support forum from Postgres to MySQL, integrated OAuth2 authentication, and redeployed the stack with Docker and AWS.</p>
-                    <div class="project-tags">
-                        <span>Docker</span><span>OAuth2</span><span>MySQL</span>
-                    </div>
-                    <div class="project-links">
-                        <a href="https://github.com/Lin3141/assure_support_site" target="_blank" class="project-link"><i class="fab fa-github"></i> Code</a>
-                        <a href="https://support.bible/" target="_blank" class="project-link"><i class="fas fa-arrow-up-right-from-square"></i> Live Site</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Awards Section -->
-    <section id="awards" class="awards">
-        <div class="container">
-            <p class="section-kicker reveal">04 <span>/</span> Recognition</p>
-            <h2 class="section-title reveal">Honors &amp; Awards</h2>
-
-            <div class="awards-grid">
-                <div class="award-card spotlight-card reveal">
-                    <div class="award-icon"><i class="fas fa-trophy"></i></div>
-                    <span class="award-amount">$10,000 Award</span>
-                    <h3>Best Use of AWS</h3>
-                    <div class="award-issuer">Amazon Web Services (AWS)</div>
-                    <p class="award-description">
-                        Developed a cloud-connected autonomous disaster-response system integrating UAVs and UGVs for real-time victim detection and mission coordination, leveraging AWS Greengrass, S3, and IoT services for mission continuity under low connectivity.
-                    </p>
-                    <div class="project-links">
-                        <a href="https://github.com/Lin3141/earthquake-response-coordination" target="_blank" class="project-link"><i class="fab fa-github"></i> Code</a>
-                    </div>
-                </div>
-
-                <div class="award-card spotlight-card reveal">
-                    <div class="award-icon"><i class="fas fa-medal"></i></div>
-                    <span class="award-amount">$2,500 Award</span>
-                    <h3>AI Hackathon Winner</h3>
-                    <div class="award-issuer">AiTinker Hackathon</div>
-                    <p class="award-description">
-                        Won 1st place at the AiTinker 48-hour AI hackathon for building Domain Sentry, a full-stack app that automates the DMCA takedown process to help clients protect their domains from online copyright infringement.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Skills Section -->
-    <section id="skills" class="skills">
-        <div class="container">
-            <p class="section-kicker reveal">05 <span>/</span> What I work with</p>
-            <h2 class="section-title reveal">Technical Skills</h2>
-
-            <div class="skills-grid">
-                <div class="skill-category spotlight-card reveal">
-                    <h3><i class="fas fa-code"></i> Programming</h3>
-                    <div class="skill-items">
-                        <span class="skill-item">Python</span>
-                        <span class="skill-item">Java</span>
-                        <span class="skill-item">C#</span>
-                        <span class="skill-item">TypeScript</span>
-                        <span class="skill-item">JavaScript</span>
-                        <span class="skill-item">SQL</span>
-                        <span class="skill-item">Swift</span>
-                    </div>
-                </div>
-
-                <div class="skill-category spotlight-card reveal">
-                    <h3><i class="fas fa-brain"></i> AI &amp; Machine Learning</h3>
-                    <div class="skill-items">
-                        <span class="skill-item">PyTorch</span>
-                        <span class="skill-item">scikit-learn</span>
-                        <span class="skill-item">NumPy</span>
-                        <span class="skill-item">LLMs / RAG</span>
-                        <span class="skill-item">LangChain</span>
-                        <span class="skill-item">Prompt Engineering</span>
-                        <span class="skill-item">Deep Learning</span>
-                    </div>
-                </div>
-
-                <div class="skill-category spotlight-card reveal">
-                    <h3><i class="fas fa-cloud"></i> Cloud &amp; Infrastructure</h3>
-                    <div class="skill-items">
-                        <span class="skill-item">AWS (EC2, S3, Lambda, ECS, Bedrock)</span>
-                        <span class="skill-item">Docker</span>
-                        <span class="skill-item">Kubernetes</span>
-                        <span class="skill-item">CI/CD</span>
-                        <span class="skill-item">Git</span>
-                    </div>
-                </div>
-
-                <div class="skill-category spotlight-card reveal">
-                    <h3><i class="fas fa-layer-group"></i> Systems &amp; Backend</h3>
-                    <div class="skill-items">
-                        <span class="skill-item">Node.js</span>
-                        <span class="skill-item">FastAPI</span>
-                        <span class="skill-item">.NET</span>
-                        <span class="skill-item">RESTful APIs</span>
-                        <span class="skill-item">OAuth 2.0</span>
-                        <span class="skill-item">Agile/Scrum</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact / Footer -->
-    <footer id="contact" class="contact">
-        <div class="contact-bg" aria-hidden="true">
-            <div class="aurora aurora-4"></div>
-        </div>
-        <div class="container">
-            <p class="section-kicker reveal light-on-dark">06 <span>/</span> Get in touch</p>
-            <h2 class="contact-title reveal">Let's build something together.</h2>
-            <p class="contact-sub reveal">Currently open to full-time, internship, and research collaboration opportunities.</p>
-
-            <div class="contact-actions reveal">
-                <button class="btn btn-primary" id="copy-email">
-                    <i class="fas fa-envelope"></i> <span id="copy-email-label">lingxinchen223@gmail.com</span>
-                </button>
-                <a href="https://www.linkedin.com/in/lingxin-chen-b65912184/" target="_blank" class="social-icon" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-                <a href="https://github.com/Lin3141" target="_blank" class="social-icon" aria-label="GitHub"><i class="fab fa-github"></i></a>
-            </div>
-
-            <div class="footer-bottom">
-                <p>&copy; <span id="year"></span> Lingxin Chen. Built with HTML, CSS &amp; a lot of coffee.</p>
-            </div>
-        </div>
-    </footer>
-
-    <button class="scroll-top-btn" id="scroll-top-btn" aria-label="Back to top"><i class="fas fa-arrow-up"></i></button>
+    </div>
 
     <script src="script.js"></script>
 </body>
