@@ -3,62 +3,111 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lingxin Chen - Full Stack Software Engineer</title>
+    <meta name="description" content="Lingxin Chen — LLM Engineer & Full Stack Software Engineer. MSCS candidate at Vanderbilt University building provider-agnostic AI systems and cloud infrastructure.">
+    <title>Lingxin Chen — LLM &amp; Full Stack Software Engineer</title>
     <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 </head>
 <body>
+    <div class="noise-overlay"></div>
+
     <!-- Navigation -->
     <nav class="navbar" id="navbar">
         <div class="nav-container">
-            <div class="nav-logo">
-                <a href="#home">Lingxin Chen</a>
-            </div>
+            <a href="#home" class="nav-logo">LC<span class="dot">.</span></a>
+
             <ul class="nav-menu" id="nav-menu">
-                <li class="nav-item">
-                    <a href="#home" class="nav-link">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#experience" class="nav-link">Experience</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#projects" class="nav-link">Projects</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#awards" class="nav-link">Awards</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#skills" class="nav-link">Skills</a>
-                </li>
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#experience" class="nav-link">Experience</a></li>
+                <li><a href="#education" class="nav-link">Education</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#awards" class="nav-link">Awards</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
             </ul>
+
+            <div class="nav-actions">
+                <button class="theme-toggle" id="theme-toggle" aria-label="Toggle color theme">
+                    <i class="fas fa-sun"></i>
+                    <i class="fas fa-moon"></i>
+                </button>
+                <button class="mobile-menu" id="mobile-menu" aria-label="Toggle navigation menu">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
         </div>
     </nav>
 
     <!-- Hero Section -->
     <section id="home" class="hero">
-        <div class="container">
+        <div class="hero-bg" aria-hidden="true">
+            <div class="aurora aurora-1"></div>
+            <div class="aurora aurora-2"></div>
+            <div class="aurora aurora-3"></div>
+            <div class="grid-overlay"></div>
+        </div>
+
+        <div class="container hero-container">
             <div class="hero-content">
                 <div class="hero-text">
-                    <h1 class="hero-name">Lingxin Chen</h1>
-                    <h2 class="hero-title">Full Stack Software Engineer | MSCS Student at Vanderbilt University</h2>
-                    <p class="hero-bio">Building reliable, human-centered software and AI systems that bridge data and design.</p>
-                    <div class="hero-buttons">
+                    <p class="hero-eyebrow reveal"><span class="pulse-dot"></span> Open to new opportunities</p>
+                    <h1 class="hero-name reveal">Hi, I'm Lingxin Chen</h1>
+                    <h2 class="hero-role reveal">
+                        <span class="role-cycle" id="role-cycle"></span><span class="cursor-blink">|</span>
+                    </h2>
+                    <p class="hero-bio reveal">
+                        MSCS candidate at Vanderbilt University building provider-agnostic LLM systems,
+                        scalable cloud infrastructure, and human-centered software that's shipped to
+                        10,000+ real users.
+                    </p>
+                    <div class="hero-buttons reveal">
                         <a href="Lingxin_Chen_Resume.pdf" target="_blank" class="btn btn-primary">
-                            <i class="fas fa-download"></i> View Resume
+                            <i class="fas fa-file-arrow-down"></i> Resume
+                        </a>
+                        <a href="https://github.com/Lin3141" target="_blank" class="btn btn-secondary">
+                            <i class="fab fa-github"></i> GitHub
                         </a>
                         <a href="https://www.linkedin.com/in/lingxin-chen-b65912184/" target="_blank" class="btn btn-secondary">
                             <i class="fab fa-linkedin"></i> LinkedIn
                         </a>
-                        <a href="http://github.com/Lin3141" target="_blank" class="btn btn-secondary">
-                            <i class="fab fa-github"></i> GitHub
-                        </a>
                     </div>
                 </div>
-                <div class="hero-image">
-                    <div class="profile-image">
-                        <img src="profileimg.jpeg" alt="Lingxin Chen">
+
+                <div class="hero-image reveal">
+                    <div class="profile-ring">
+                        <div class="profile-image">
+                            <img src="profileimg.jpeg" alt="Lingxin Chen" loading="eager">
+                        </div>
                     </div>
+                </div>
+            </div>
+
+            <div class="scroll-indicator" aria-hidden="true">
+                <span>Scroll</span>
+                <div class="mouse"><div class="wheel"></div></div>
+            </div>
+        </div>
+
+        <!-- Stats strip -->
+        <div class="stats-strip reveal">
+            <div class="container stats-grid">
+                <div class="stat-item">
+                    <span class="stat-number" data-target="10" data-suffix="K+">0</span>
+                    <span class="stat-label">Users Impacted</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number" data-target="120" data-suffix="+">0</span>
+                    <span class="stat-label">Full-Stack Issues Resolved</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number" data-target="50" data-suffix="%">0</span>
+                    <span class="stat-label">LLM Inference Cost Cut</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number" data-target="4" data-suffix="x">0</span>
+                    <span class="stat-label">Faster Model Training</span>
                 </div>
             </div>
         </div>
@@ -67,56 +116,114 @@
     <!-- Experience Section -->
     <section id="experience" class="experience">
         <div class="container">
-            <h2 class="section-title">Experience</h2>
-            <div class="timeline">
-                <div class="timeline-item">
+            <p class="section-kicker reveal">01 <span>/</span> Where I've worked</p>
+            <h2 class="section-title reveal">Experience</h2>
+
+            <div class="timeline" id="timeline">
+                <div class="timeline-track"><div class="timeline-progress" id="timeline-progress"></div></div>
+
+                <div class="timeline-item reveal">
                     <div class="timeline-dot"></div>
-                    <div class="timeline-content">
+                    <div class="timeline-content spotlight-card">
+                        <span class="timeline-date">May 2026 – Present</span>
+                        <h3>LLM Engineer</h3>
+                        <h4>HLAB</h4>
+                        <ul>
+                            <li>Architected a provider-agnostic LLM generation client (Anthropic, OpenAI, Google) with a factory-based registry, asyncio request batching, and MySQL persistence.</li>
+                            <li>Engineered a model-aware decoding-config layer to standardize sampling controls across providers, preventing production API errors and ensuring cross-model reproducibility.</li>
+                            <li>Reduced inference costs by ~50% by integrating Anthropic's Batches API as the primary scaling path for bulk document generation.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="timeline-item reveal">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content spotlight-card">
+                        <span class="timeline-date">Nov 2025 – Present</span>
+                        <h3>Research Assistant</h3>
+                        <h4>Vanderbilt College of Connected Computing</h4>
+                        <ul>
+                            <li>Engineered experimental workflows for Graph Neural Networks on 395K-cell datasets, improving training efficiency 4x through iterative hyperparameter tuning and architectural refinement.</li>
+                            <li>Led a systematic evaluation of state-of-the-art baselines with rigorous statistical validation, identifying and correcting transductive bias to ensure reproducible metrics.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="timeline-item reveal">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content spotlight-card">
+                        <span class="timeline-date">Mar 2025 – Present</span>
+                        <h3>Cloud Engineer</h3>
+                        <h4>Cloud Innovation Lab with Amazon</h4>
+                        <ul>
+                            <li>Automated video segmentation using Bedrock, Transcribe, and PySceneDetect, combining lexical and visual signal to reduce 30-minute tapes into 25 semantic segments.</li>
+                            <li>Deployed cost-effective AWS infrastructure (S3, Lambda, ECS) that scales to zero, keeping infrastructure spend at $0 when idle.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="timeline-item reveal">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content spotlight-card">
+                        <span class="timeline-date">Aug 2022 – May 2025</span>
                         <h3>Full Stack Software Engineer</h3>
                         <h4>SIL Global</h4>
-                        <span class="timeline-date">Aug 2022 – May 2025</span>
                         <ul>
-                            <li>Enhanced UX for 10K+ users by shipping 10+ features for Paratext (C#/.NET, WPF)</li>
-                            <li>Improved REST API reliability and added 60+ unit tests, achieving 95% CI/CD success rate</li>
+                            <li>Shipped 10+ major features for Paratext 9.4–9.6 (C#/.NET), directly impacting 10,000+ users.</li>
+                            <li>Debugged and resolved 120+ full-stack issues by cleaning up data flow and adding health checks, cutting reported bugs by 30%.</li>
+                            <li>Stabilized the CI/CD pipeline (TeamCity) and increased unit test coverage to improve overall reliability.</li>
                         </ul>
                     </div>
                 </div>
-                
-                <div class="timeline-item">
+
+                <div class="timeline-item reveal">
                     <div class="timeline-dot"></div>
-                    <div class="timeline-content">
-                        <h3>Software Engineer Intern</h3>
-                        <h4>SIL Global</h4>
+                    <div class="timeline-content spotlight-card">
                         <span class="timeline-date">Jun 2022 – Aug 2022</span>
+                        <h3>Software Engineer Intern</h3>
+                        <h4>Jaars</h4>
                         <ul>
-                            <li>Led 3-member intern team; built QA/support site for 2,000+ users (PHP, MySQL)</li>
-                            <li>Migrated 1,000+ records and deployed with Docker, Kubernetes, AWS</li>
+                            <li>Led a team of 3 to build a QA platform for 2,000+ users, integrating 11 plugins and OAuth 2.0.</li>
+                            <li>Managed a Postgres → MySQL migration for 1,000+ records, ensuring zero data loss.</li>
+                            <li>Deployed the full stack via Docker, Kubernetes, and AWS, maintaining 99.9% uptime.</li>
                         </ul>
                     </div>
                 </div>
-                
-                <div class="timeline-item">
+
+                <div class="timeline-item reveal">
                     <div class="timeline-dot"></div>
-                    <div class="timeline-content">
-                        <h3>Lab Assistant</h3>
-                        <h4>Wheaton College</h4>
-                        <span class="timeline-date">Aug 2021 – May 2022</span>
-                        <ul>
-                            <li>Mentored 30 students in Java and object-oriented programming</li>
-                        </ul>
-                    </div>
-                </div>
-                
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-content">
+                    <div class="timeline-content spotlight-card">
+                        <span class="timeline-date">Jun 2021 – Aug 2021</span>
                         <h3>Software Developer Intern</h3>
                         <h4>Yuhuan Rural Commercial Bank</h4>
-                        <span class="timeline-date">Jun 2021 – Aug 2021</span>
                         <ul>
-                            <li>Built cross-platform employee portal (React, Node.js, MySQL)</li>
+                            <li>Developed a cross-platform employee portal for 2,000+ users using React/Node.js, cutting load time by 40%.</li>
                         </ul>
                     </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="education">
+        <div class="container">
+            <p class="section-kicker reveal">02 <span>/</span> Where I've studied</p>
+            <h2 class="section-title reveal">Education</h2>
+
+            <div class="education-grid">
+                <div class="education-card spotlight-card reveal">
+                    <div class="education-icon"><i class="fas fa-graduation-cap"></i></div>
+                    <span class="education-date">Aug 2025 – May 2027</span>
+                    <h3>Master's in Computer Science</h3>
+                    <h4>Vanderbilt University</h4>
+                </div>
+
+                <div class="education-card spotlight-card reveal">
+                    <div class="education-icon"><i class="fas fa-graduation-cap"></i></div>
+                    <span class="education-date">Aug 2018 – May 2022</span>
+                    <h3>Bachelor's in Computer Science <span class="badge-honors">cum laude</span></h3>
+                    <h4>Wheaton College</h4>
                 </div>
             </div>
         </div>
@@ -125,34 +232,56 @@
     <!-- Projects Section -->
     <section id="projects" class="projects">
         <div class="container">
-            <h2 class="section-title">Featured Projects</h2>
+            <p class="section-kicker reveal">03 <span>/</span> What I've built</p>
+            <h2 class="section-title reveal">Featured Projects</h2>
+
             <div class="projects-grid">
-                <div class="project-card">
-                    <div class="project-icon">
-                        <i class="fas fa-utensils"></i>
+                <div class="project-card spotlight-card reveal">
+                    <div class="project-icon"><i class="fas fa-utensils"></i></div>
+                    <h3>Baby Food RAG Assistant</h3>
+                    <p>A retrieval-augmented Q&amp;A system for infant nutrition — hybrid BM25 + vector search over USDA data, with confidence scores and cited sources served through a FastAPI backend.</p>
+                    <div class="project-tags">
+                        <span>FastAPI</span><span>RAG</span><span>Hybrid Search</span>
                     </div>
-                    <h3>BabyFood Tracker</h3>
-                    <p>AI-powered nutrition planner for infants, built with FastAPI, React, and Qdrant vector DB. Uses RAG pipelines with OpenAI API for baby-food recommendations based on age, nutrition balance, and feeding history.</p>
                     <div class="project-links">
-                        <a href="https://github.com/Lin3141/Baby-Food-Checker" target="_blank" class="project-link">
-                            <i class="fab fa-github"></i> GitHub
-                        </a>
+                        <a href="https://github.com/Lin3141/baby-food-rag" target="_blank" class="project-link"><i class="fab fa-github"></i> Code</a>
                     </div>
                 </div>
-                
-                <div class="project-card">
-                    <div class="project-icon">
-                        <i class="fas fa-puzzle-piece"></i>
+
+                <div class="project-card spotlight-card reveal">
+                    <div class="project-icon"><i class="fas fa-cloud-arrow-up"></i></div>
+                    <h3>AWS Serverless Document Processing</h3>
+                    <p>An event-driven serverless stack (React + AWS CDK + Python Lambda) handling secure, direct-to-S3 presigned uploads and automated document processing pipelines.</p>
+                    <div class="project-tags">
+                        <span>AWS CDK</span><span>Lambda</span><span>S3</span>
                     </div>
-                    <h3>Support.Bible Migration</h3>
-                    <p>Migrated Postgres → MySQL, integrated OAuth2, deployed with Docker + AWS.</p>
                     <div class="project-links">
-                        <a href="https://github.com/Lin3141/assure_support_site" target="_blank" class="project-link">
-                            <i class="fab fa-github"></i> GitHub
-                        </a>
-                        <a href="https://support.bible/" target="_blank" class="project-link">
-                            <i class="fas fa-external-link-alt"></i> Live Site
-                        </a>
+                        <a href="https://github.com/Lin3141/aws-serverless-pdf-qa" target="_blank" class="project-link"><i class="fab fa-github"></i> Code</a>
+                    </div>
+                </div>
+
+                <div class="project-card spotlight-card reveal">
+                    <div class="project-icon"><i class="fas fa-qrcode"></i></div>
+                    <h3>Daycare Policy Navigator</h3>
+                    <p>Lets parents scan a QR code to ask questions about their daycare's handbook — answers are grounded in the uploaded PDF with page-level citations via Qdrant semantic search.</p>
+                    <div class="project-tags">
+                        <span>Next.js</span><span>FastAPI</span><span>Qdrant</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/Lin3141/Daycare-Policy-Nav" target="_blank" class="project-link"><i class="fab fa-github"></i> Code</a>
+                    </div>
+                </div>
+
+                <div class="project-card spotlight-card reveal">
+                    <div class="project-icon"><i class="fas fa-puzzle-piece"></i></div>
+                    <h3>Support.Bible Migration</h3>
+                    <p>Migrated a live QA support forum from Postgres to MySQL, integrated OAuth2 authentication, and redeployed the stack with Docker and AWS.</p>
+                    <div class="project-tags">
+                        <span>Docker</span><span>OAuth2</span><span>MySQL</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/Lin3141/assure_support_site" target="_blank" class="project-link"><i class="fab fa-github"></i> Code</a>
+                        <a href="https://support.bible/" target="_blank" class="project-link"><i class="fas fa-arrow-up-right-from-square"></i> Live Site</a>
                     </div>
                 </div>
             </div>
@@ -162,31 +291,31 @@
     <!-- Awards Section -->
     <section id="awards" class="awards">
         <div class="container">
-            <h2 class="section-title">Honors & Awards</h2>
+            <p class="section-kicker reveal">04 <span>/</span> Recognition</p>
+            <h2 class="section-title reveal">Honors &amp; Awards</h2>
+
             <div class="awards-grid">
-                <div class="award-card">
-                    <div class="award-content">
-                        <h3>Best Use of AWS Award - $10,000 Award</h3>
-                        <div class="award-issuer">Issuer: Amazon Web Services (AWS)</div>
-                        <p class="award-description">
-                            Developed a cloud-connected autonomous disaster-response system integrating UAVs and UGVs for real-time victim detection and mission coordination. Leveraged AWS Greengrass, S3, and IoT services to ensure mission continuity under low connectivity conditions.
-                        </p>
-                        <div class="project-links">
-                            <a href="https://github.com/Lin3141/earthquake-response-coordination" target="_blank" class="project-link">
-                                <i class="fab fa-github"></i> GitHub
-                            </a>
-                        </div>
+                <div class="award-card spotlight-card reveal">
+                    <div class="award-icon"><i class="fas fa-trophy"></i></div>
+                    <span class="award-amount">$10,000 Award</span>
+                    <h3>Best Use of AWS</h3>
+                    <div class="award-issuer">Amazon Web Services (AWS)</div>
+                    <p class="award-description">
+                        Developed a cloud-connected autonomous disaster-response system integrating UAVs and UGVs for real-time victim detection and mission coordination, leveraging AWS Greengrass, S3, and IoT services for mission continuity under low connectivity.
+                    </p>
+                    <div class="project-links">
+                        <a href="https://github.com/Lin3141/earthquake-response-coordination" target="_blank" class="project-link"><i class="fab fa-github"></i> Code</a>
                     </div>
                 </div>
-                
-                <div class="award-card">
-                    <div class="award-content">
-                        <h3>AI Hackathon Winner - $2,500 Award</h3>
-                        <div class="award-issuer">Issuer: AiTinker Hackathon</div>
-                        <p class="award-description">
-                            Won 1st Place and a $2,500 prize at the AiTinker 48-hour AI Hackathon for developing Domain Sentry, a full-stack application that automates the DMCA takedown process to help clients protect their domains from online copyright infringement.
-                        </p>
-                    </div>
+
+                <div class="award-card spotlight-card reveal">
+                    <div class="award-icon"><i class="fas fa-medal"></i></div>
+                    <span class="award-amount">$2,500 Award</span>
+                    <h3>AI Hackathon Winner</h3>
+                    <div class="award-issuer">AiTinker Hackathon</div>
+                    <p class="award-description">
+                        Won 1st place at the AiTinker 48-hour AI hackathon for building Domain Sentry, a full-stack app that automates the DMCA takedown process to help clients protect their domains from online copyright infringement.
+                    </p>
                 </div>
             </div>
         </div>
@@ -195,63 +324,87 @@
     <!-- Skills Section -->
     <section id="skills" class="skills">
         <div class="container">
-            <h2 class="section-title">Technical Skills</h2>
+            <p class="section-kicker reveal">05 <span>/</span> What I work with</p>
+            <h2 class="section-title reveal">Technical Skills</h2>
+
             <div class="skills-grid">
-                <div class="skill-category">
-                    <h3><i class="fas fa-code"></i> Languages</h3>
+                <div class="skill-category spotlight-card reveal">
+                    <h3><i class="fas fa-code"></i> Programming</h3>
                     <div class="skill-items">
                         <span class="skill-item">Python</span>
                         <span class="skill-item">Java</span>
                         <span class="skill-item">C#</span>
-                        <span class="skill-item">JavaScript</span>
                         <span class="skill-item">TypeScript</span>
-                        <span class="skill-item">Swift</span>
+                        <span class="skill-item">JavaScript</span>
                         <span class="skill-item">SQL</span>
+                        <span class="skill-item">Swift</span>
                     </div>
                 </div>
-                
-                <div class="skill-category">
-                    <h3><i class="fas fa-layer-group"></i> Frameworks</h3>
-                    <div class="skill-items">
-                        <span class="skill-item">React</span>
-                        <span class="skill-item">Next.js</span>
-                        <span class="skill-item">.NET</span>
-                        <span class="skill-item">Flask</span>
-                        <span class="skill-item">FastAPI</span>
-                    </div>
-                </div>
-                
-                <div class="skill-category">
-                    <h3><i class="fas fa-brain"></i> AI/ML</h3>
+
+                <div class="skill-category spotlight-card reveal">
+                    <h3><i class="fas fa-brain"></i> AI &amp; Machine Learning</h3>
                     <div class="skill-items">
                         <span class="skill-item">PyTorch</span>
-                        <span class="skill-item">TensorFlow</span>
                         <span class="skill-item">scikit-learn</span>
-                        <span class="skill-item">Hugging Face</span>
-                        <span class="skill-item">RAG</span>
+                        <span class="skill-item">NumPy</span>
+                        <span class="skill-item">LLMs / RAG</span>
+                        <span class="skill-item">LangChain</span>
+                        <span class="skill-item">Prompt Engineering</span>
+                        <span class="skill-item">Deep Learning</span>
                     </div>
                 </div>
-                
-                <div class="skill-category">
-                    <h3><i class="fas fa-cloud"></i> Cloud/DevOps</h3>
+
+                <div class="skill-category spotlight-card reveal">
+                    <h3><i class="fas fa-cloud"></i> Cloud &amp; Infrastructure</h3>
                     <div class="skill-items">
-                        <span class="skill-item">AWS</span>
+                        <span class="skill-item">AWS (EC2, S3, Lambda, ECS, Bedrock)</span>
                         <span class="skill-item">Docker</span>
                         <span class="skill-item">Kubernetes</span>
                         <span class="skill-item">CI/CD</span>
                         <span class="skill-item">Git</span>
                     </div>
                 </div>
+
+                <div class="skill-category spotlight-card reveal">
+                    <h3><i class="fas fa-layer-group"></i> Systems &amp; Backend</h3>
+                    <div class="skill-items">
+                        <span class="skill-item">Node.js</span>
+                        <span class="skill-item">FastAPI</span>
+                        <span class="skill-item">.NET</span>
+                        <span class="skill-item">RESTful APIs</span>
+                        <span class="skill-item">OAuth 2.0</span>
+                        <span class="skill-item">Agile/Scrum</span>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="footer">
+    <!-- Contact / Footer -->
+    <footer id="contact" class="contact">
+        <div class="contact-bg" aria-hidden="true">
+            <div class="aurora aurora-4"></div>
+        </div>
         <div class="container">
-            <p>&copy; 2025 Lingxin Chen. Built with passion and attention to detail.</p>
+            <p class="section-kicker reveal light-on-dark">06 <span>/</span> Get in touch</p>
+            <h2 class="contact-title reveal">Let's build something together.</h2>
+            <p class="contact-sub reveal">Currently open to full-time, internship, and research collaboration opportunities.</p>
+
+            <div class="contact-actions reveal">
+                <button class="btn btn-primary" id="copy-email">
+                    <i class="fas fa-envelope"></i> <span id="copy-email-label">lingxinchen223@gmail.com</span>
+                </button>
+                <a href="https://www.linkedin.com/in/lingxin-chen-b65912184/" target="_blank" class="social-icon" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                <a href="https://github.com/Lin3141" target="_blank" class="social-icon" aria-label="GitHub"><i class="fab fa-github"></i></a>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; <span id="year"></span> Lingxin Chen. Built with HTML, CSS &amp; a lot of coffee.</p>
+            </div>
         </div>
     </footer>
+
+    <button class="scroll-top-btn" id="scroll-top-btn" aria-label="Back to top"><i class="fas fa-arrow-up"></i></button>
 
     <script src="script.js"></script>
 </body>
