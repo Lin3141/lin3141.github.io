@@ -155,11 +155,10 @@ kbd {
     height: 64px;
     border-radius: 50%;
     object-fit: cover;
-    filter: grayscale(1) contrast(1.04);
     box-shadow: 0 0 0 1px var(--rule);
-    transition: filter 0.6s var(--ease);
+    transition: transform 0.4s var(--ease), box-shadow 0.3s;
 }
-.avatar:hover { filter: none; }
+.avatar:hover { transform: scale(1.05); box-shadow: 0 0 0 2px var(--accent); }
 
 .name {
     margin-top: 28px;
