@@ -88,8 +88,8 @@
             <section class="section" id="about" aria-labelledby="about-title">
                 <h2 class="section-label" id="about-title"><span class="idx">01</span>About</h2>
                 <div class="prose">
-                    <p>Most of my work lives in the unglamorous half of AI: the plumbing that makes a model's output consistent and affordable enough to rely on. At <strong>HLAB</strong>, that means one client that talks to Anthropic, OpenAI, and Google models the same way, so the same settings mean the same thing on every provider.</p>
-                    <p>I came to it from product engineering. I spent nearly three years at <strong>SIL Global</strong> on Paratext, a translation editor with more than 10,000 users, shipping features and fixing what broke. Now I'm a Master's student at <strong>Vanderbilt</strong>, researching graph neural networks and building serverless video pipelines on AWS at the <strong>Cloud Innovation Lab</strong>.</p>
+                    <p>Most of my work lives in the unglamorous half of AI: the plumbing that makes a model's output consistent and affordable enough to rely on. At <strong>HLAB</strong>, that means one generation layer across eight model backends, from Claude and GPT to open models I host myself, that knows which settings each model will accept.</p>
+                    <p>I came to it from product engineering. I spent nearly three years at <strong>SIL Global</strong> on Paratext, a translation editor with more than 10,000 users, shipping features and fixing what broke. Now I'm a Master's student at <strong>Vanderbilt</strong>, researching graph neural networks and building tools at the <strong>Cloud Innovation Lab</strong> that help the university's archivists work through hours of digitized tape.</p>
                 </div>
                 <dl class="numbers">
                     <div><dt>~50%</dt><dd>lower LLM inference cost after moving bulk generation to Anthropic's Batches API</dd></div>
@@ -109,17 +109,18 @@
                         <button type="button" class="job-head" aria-expanded="true" aria-controls="job-hlab">
                             <span class="job-date">May 2026 – <span class="now">Now</span></span>
                             <span class="job-title">LLM Engineer<span class="at">HLAB</span></span>
-                            <span class="job-summary">LLM generation infrastructure for bulk document workflows.</span>
+                            <span class="job-summary">A provider-agnostic LLM generation pipeline for large-scale text studies.</span>
                             <span class="job-toggle" aria-hidden="true"></span>
                         </button>
                         <div class="job-body" id="job-hlab">
                             <div class="job-body-inner">
                                 <ul>
-                                    <li>Architected a provider-agnostic generation client for Anthropic, OpenAI, and Google models, with a factory-based registry, asyncio request batching, and MySQL persistence.</li>
-                                    <li>Built a model-aware decoding-config layer that standardizes sampling controls across providers, preventing production API errors and keeping output reproducible across models.</li>
+                                    <li>Built one generation interface across eight backends (Claude, GPT, Gemini, DeepSeek, and Llama through their APIs, plus self-hosted vLLM and llama.cpp), each resolved through a factory registry.</li>
+                                    <li>Designed a model-aware decoding layer that sends sampling settings (temperature, top-p, repetition penalty) to models that accept them and reasoning-effort settings to models that reject them, preventing API errors and keeping runs comparable.</li>
+                                    <li>Ran generation as concurrent batches with retries, logging every API call and the exact settings sent to MySQL, so each document traces back to how it was produced.</li>
                                     <li>Cut inference cost by ~50% by making Anthropic's Batches API the primary scaling path for bulk generation, alongside prompt optimization.</li>
                                 </ul>
-                                <p class="tags">Python · asyncio · MySQL · Anthropic · OpenAI · Google</p>
+                                <p class="tags">Python · vLLM · llama.cpp · MySQL · Anthropic · OpenAI · Gemini</p>
                             </div>
                         </div>
                     </li>
@@ -146,16 +147,18 @@
                         <button type="button" class="job-head" aria-expanded="false" aria-controls="job-cil">
                             <span class="job-date">Mar 2025 – <span class="now">Now</span></span>
                             <span class="job-title">Cloud Engineer<span class="at">Cloud Innovation Lab with Amazon</span></span>
-                            <span class="job-summary">Serverless AWS pipelines that split long video into semantic segments.</span>
+                            <span class="job-summary">An AI segmentation pipeline and review editor for Vanderbilt's archival video.</span>
                             <span class="job-toggle" aria-hidden="true"></span>
                         </button>
                         <div class="job-body" id="job-cil">
                             <div class="job-body-inner">
                                 <ul>
-                                    <li>Automated video segmentation with Bedrock, Transcribe, and PySceneDetect, combining lexical and visual signals to turn 30-minute tapes into 25 semantic segments.</li>
-                                    <li>Deployed AWS infrastructure (S3, Lambda, ECS) that scales to zero, keeping spend at $0 when idle.</li>
+                                    <li>Built the transcription and segmentation stages: speaker-labeled transcripts from Amazon Transcribe, story boundaries combined from topic shifts, pauses, and a Claude pass on Bedrock, and one multimodal call per segment that reads its words and a sampled frame to label it.</li>
+                                    <li>Wrote an evaluation harness that scores detected boundaries against human-corrected ground truth (boundary F1, Pk, WindowDiff), and used it to improve segmentation accuracy.</li>
+                                    <li>Built core features of the React review editor archivists use: segment editing, editable transcripts, trimmed video versions, WebVTT export, multi-file upload, and renames that stay consistent in storage.</li>
+                                    <li>Worked on the event-driven AWS stack (S3, Lambda, ECS, defined in CDK), which scales to zero between jobs, including stopping renamed videos from re-running the pipeline.</li>
                                 </ul>
-                                <p class="tags">Bedrock · Transcribe · Lambda · ECS · S3 · PySceneDetect</p>
+                                <p class="tags">Bedrock · Transcribe · ECS · Lambda · CDK · React · TypeScript</p>
                             </div>
                         </div>
                     </li>
