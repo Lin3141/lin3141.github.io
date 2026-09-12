@@ -269,6 +269,8 @@ kbd {
 .prose p { max-width: 58ch; font-size: 17px; line-height: 1.7; }
 .prose p + p { margin-top: 1.1em; }
 .prose strong { font-weight: 500; color: var(--ink); }
+.prose a { color: var(--ink); border-bottom: 1px solid var(--rule); transition: border-color 0.2s; }
+.prose a:hover { border-color: var(--accent); }
 
 .numbers { display: grid; grid-template-columns: 1fr 1fr; margin-top: 44px; border-top: 1px solid var(--rule); }
 .numbers > div { padding: 22px 0 24px; border-bottom: 1px solid var(--rule); }
