@@ -89,15 +89,15 @@
                 <h2 class="section-label" id="about-title"><span class="idx">01</span>About</h2>
                 <div class="prose">
                     <p>Hi, I'm Lingxin, a software engineer and Master's student in Computer Science at <strong>Vanderbilt University</strong>. I build LLM systems and the cloud infrastructure they run on.</p>
-                    <p>Right now, I'm an LLM Engineer at <strong>HLAB</strong>, where I build the pipeline that generates and analyzes text across models like Claude, GPT, Llama, and DeepSeek. I'm also a research assistant working on graph neural networks, and at the <strong>Cloud Innovation Lab with Amazon</strong>, I build AI tools that help Vanderbilt's archivists segment and trim hours of digitized video.</p>
+                    <p>Right now, I'm an LLM Engineer at <strong>HLAB</strong>, Vanderbilt's Human Language Analysis Lab, where I build the service that generates and analyzes text across models like Claude, GPT, Gemini, and Llama. I'm also a research assistant in the <strong>Sarkar Lab</strong>, building SpaPro, a graph neural network that predicts protein levels from gene expression and tissue images. Through September 2026, I was a cloud engineer at the <strong>Cloud Innovation Lab</strong>, building an AWS pipeline that segments archival TV broadcasts for Vanderbilt's archivists.</p>
                     <p>Before grad school, I spent nearly three years as a full-stack engineer at <strong>SIL Global</strong>, shipping features for Paratext, a translation editor used by more than 10,000 people.</p>
                     <p>Outside of work, I love traveling with my family, and we've been to a lot of places. When we're home, it's us and the cutest cat.</p>
                     <p>I'm looking for full-time roles starting in 2027, especially in LLM infrastructure and applied AI. <a href="#contact">Get in touch</a>.</p>
                 </div>
                 <dl class="numbers">
-                    <div><dt>~50%</dt><dd>lower LLM inference cost after moving bulk generation to Anthropic's Batches API</dd></div>
-                    <div><dt>4×</dt><dd>faster graph neural network training on a 395K-cell dataset</dd></div>
-                    <div><dt>120+</dt><dd>full-stack issues resolved at SIL, with reported bugs down 30%</dd></div>
+                    <div><dt>15K+</dt><dd>documents generated through one interface across 8 LLM backends</dd></div>
+                    <div><dt>8–12×</dt><dd>faster training than the strongest GNN baseline, across 395K cells</dd></div>
+                    <div><dt>95</dt><dd>issues resolved across Paratext 9.3–9.6, 35 of them Critical or Urgent</dd></div>
                     <div><dt>$0</dt><dd>idle spend on the scale-to-zero AWS stack I deployed</dd></div>
                 </dl>
             </section>
@@ -111,19 +111,20 @@
                     <li class="job" data-open>
                         <button type="button" class="job-head" aria-expanded="true" aria-controls="job-hlab">
                             <span class="job-date">May 2026 – <span class="now">Now</span></span>
-                            <span class="job-title">LLM Engineer<span class="at">HLAB</span></span>
+                            <span class="job-title">LLM Engineer<span class="at">Human Language Analysis Lab</span></span>
                             <span class="job-summary">A provider-agnostic LLM generation pipeline for large-scale text studies.</span>
                             <span class="job-toggle" aria-hidden="true"></span>
                         </button>
                         <div class="job-body" id="job-hlab">
                             <div class="job-body-inner">
                                 <ul>
-                                    <li>Built one generation interface across eight backends (Claude, GPT, Gemini, DeepSeek, and Llama through their APIs, plus self-hosted vLLM and llama.cpp), each resolved through a factory registry.</li>
+                                    <li>Built one generation service across eight swappable backends (Claude, GPT, Gemini, DeepSeek, and Llama through their APIs, plus self-hosted vLLM and llama.cpp), with concurrent, crash-safe runs that resume where they stopped; it has generated 15K+ documents.</li>
                                     <li>Designed a model-aware decoding layer that sends sampling settings (temperature, top-p, repetition penalty) to models that accept them and reasoning-effort settings to models that reject them, preventing API errors and keeping runs comparable.</li>
-                                    <li>Ran generation as concurrent batches with retries, logging every API call and the exact settings sent to MySQL, so each document traces back to how it was produced.</li>
-                                    <li>Cut inference cost by ~50% by making Anthropic's Batches API the primary scaling path for bulk generation, alongside prompt optimization.</li>
+                                    <li>Designed an engine-agnostic SQL layer (SQLite or MySQL) that feeds the DLATK text-analysis toolkit and logs every API call with the exact settings sent, so each document traces back to how it was produced.</li>
+                                    <li>Served open-weight LLMs up to 397B parameters with vLLM and llama.cpp.</li>
+                                    <li>Showed that a reported “LLMs lack human-like variance” result was confounded by text length and decoding settings: length-matching raised Llama-4's trait-variance ratio from 0.83 to 1.06 (human = 1.0).</li>
                                 </ul>
-                                <p class="tags">Python · vLLM · llama.cpp · MySQL · Anthropic · OpenAI · Gemini</p>
+                                <p class="tags">Python · vLLM · llama.cpp · SQLite · MySQL · DLATK · Anthropic · OpenAI · Gemini</p>
                             </div>
                         </div>
                     </li>
@@ -131,37 +132,39 @@
                     <li class="job">
                         <button type="button" class="job-head" aria-expanded="false" aria-controls="job-vu">
                             <span class="job-date">Nov 2025 – <span class="now">Now</span></span>
-                            <span class="job-title">Research Assistant<span class="at">Vanderbilt College of Connected Computing</span></span>
-                            <span class="job-summary">Graph neural network experiments on 395K-cell datasets.</span>
+                            <span class="job-title">Research Assistant<span class="at">Sarkar Lab, Vanderbilt</span></span>
+                            <span class="job-summary">SpaPro, a multimodal graph neural network for spatial multi-omics.</span>
                             <span class="job-toggle" aria-hidden="true"></span>
                         </button>
                         <div class="job-body" id="job-vu">
                             <div class="job-body-inner">
                                 <ul>
-                                    <li>Engineered experimental workflows for graph neural networks on 395K-cell datasets, speeding up training 4× through iterative hyperparameter tuning and architectural refinement.</li>
-                                    <li>Led a systematic evaluation of state-of-the-art baselines, using statistical validation to identify and correct transductive bias so reported metrics are robust and reproducible.</li>
+                                    <li>Developed SpaPro, a multimodal graph neural network in PyTorch that predicts protein levels from gene expression and tissue images across 395K cells, outperforming the best of 8 published methods.</li>
+                                    <li>Designed the model to train 8–12× faster than the strongest GNN baseline, which made 1,000+ logged experiment runs practical.</li>
+                                    <li>Rebuilt a leakage-free benchmark of 11 methods, and caught a misconfigured baseline that had inverted a published ranking.</li>
+                                    <li>First-author paper in preparation: <em>SpaPro: Adaptive RNA-to-Protein Decoding in Spatial Multi-omics Data</em>.</li>
                                 </ul>
-                                <p class="tags">Graph neural networks · Benchmarking · Statistical validation</p>
+                                <p class="tags">PyTorch · PyTorch Geometric · Graph neural networks · Multimodal · Benchmarking</p>
                             </div>
                         </div>
                     </li>
 
                     <li class="job">
                         <button type="button" class="job-head" aria-expanded="false" aria-controls="job-cil">
-                            <span class="job-date">Mar 2025 – <span class="now">Now</span></span>
-                            <span class="job-title">Cloud Engineer<span class="at">Cloud Innovation Lab with Amazon</span></span>
-                            <span class="job-summary">An AI segmentation pipeline and review editor for Vanderbilt's archival video.</span>
+                            <span class="job-date">Mar – Sep 2026</span>
+                            <span class="job-title">Cloud Engineer<span class="at">Vanderbilt Cloud Innovation Lab</span></span>
+                            <span class="job-summary">An event-driven AWS pipeline that segments archival TV broadcasts for Vanderbilt's archivists.</span>
                             <span class="job-toggle" aria-hidden="true"></span>
                         </button>
                         <div class="job-body" id="job-cil">
                             <div class="job-body-inner">
                                 <ul>
-                                    <li>Built the transcription and segmentation stages: speaker-labeled transcripts from Amazon Transcribe, story boundaries combined from topic shifts, pauses, and a Claude pass on Bedrock, and one multimodal call per segment that reads its words and a sampled frame to label it.</li>
-                                    <li>Wrote an evaluation harness that scores detected boundaries against human-corrected ground truth (boundary F1, Pk, WindowDiff), and used it to improve segmentation accuracy.</li>
+                                    <li>Built an event-driven AWS pipeline (S3 → Lambda → ECS) that splits a 30-minute archival TV broadcast into 20+ labeled segments in about 10 minutes, for under $1 per video.</li>
+                                    <li>Fused shot boundaries from PySceneDetect, speaker-labeled transcripts from Amazon Transcribe, and Claude descriptions of sampled frames; merging shots by speaker raised boundary F1 from 0.04 to 0.44, measured by an evaluation harness I wrote (boundary F1, Pk, WindowDiff) against human-corrected ground truth.</li>
                                     <li>Built core features of the React review editor archivists use: segment editing, editable transcripts, trimmed video versions, WebVTT export, multi-file upload, and renames that stay consistent in storage.</li>
-                                    <li>Worked on the event-driven AWS stack (S3, Lambda, ECS, defined in CDK), which scales to zero between jobs, including stopping renamed videos from re-running the pipeline.</li>
+                                    <li>Defined the infrastructure in AWS CDK with 0–2 instance autoscaling ($0 when idle), transcript caching, and retries with backoff.</li>
                                 </ul>
-                                <p class="tags">Bedrock · Transcribe · ECS · Lambda · CDK · React · TypeScript</p>
+                                <p class="tags">Bedrock · Transcribe · PySceneDetect · ECS · Lambda · CDK · React · TypeScript</p>
                             </div>
                         </div>
                     </li>
@@ -170,17 +173,17 @@
                         <button type="button" class="job-head" aria-expanded="false" aria-controls="job-sil">
                             <span class="job-date">Aug 2022 – May 2025</span>
                             <span class="job-title">Full Stack Software Engineer<span class="at">SIL Global</span></span>
-                            <span class="job-summary">Features and reliability work on Paratext 9.4–9.6.</span>
+                            <span class="job-summary">Features and reliability work on Paratext 9.3–9.6.</span>
                             <span class="job-toggle" aria-hidden="true"></span>
                         </button>
                         <div class="job-body" id="job-sil">
                             <div class="job-body-inner">
                                 <ul>
-                                    <li>Shipped 10+ major features across Paratext 9.4–9.6 (C#/.NET), reaching 10,000+ users.</li>
-                                    <li>Resolved 120+ full-stack issues by cleaning up data flow and adding health checks, cutting reported bugs by 30%.</li>
-                                    <li>Stabilized the TeamCity CI/CD pipeline and raised unit test coverage.</li>
+                                    <li>Built whitespace and invisible-character support, the headline feature of Paratext 9.5, in C#/.NET across Scripture Reference Settings, Quotation Rules, project creation, and tool menus.</li>
+                                    <li>Resolved 95 issues across releases 9.3–9.6 (57 of them bugs, 35 rated Critical or Urgent), including an exception that corrupted data.</li>
+                                    <li>Fixed 25 false-error defects in the text-checking engine, and adapted core dialogs for right-to-left UI languages.</li>
                                 </ul>
-                                <p class="tags">C# · .NET · TeamCity · CI/CD</p>
+                                <p class="tags">C# · .NET · Text checking · Right-to-left UI</p>
                             </div>
                         </div>
                     </li>
@@ -188,16 +191,16 @@
                     <li class="job">
                         <button type="button" class="job-head" aria-expanded="false" aria-controls="job-jaars">
                             <span class="job-date">Jun – Aug 2022</span>
-                            <span class="job-title">Software Engineer Intern<span class="at">Jaars</span></span>
-                            <span class="job-summary">Led a three-person team building a QA platform for 2,000+ users.</span>
+                            <span class="job-title">Software Engineer Intern<span class="at">JAARS</span></span>
+                            <span class="job-summary">Led a three-person team building Support.Bible, Paratext's community Q&amp;A site.</span>
                             <span class="job-toggle" aria-hidden="true"></span>
                         </button>
                         <div class="job-body" id="job-jaars">
                             <div class="job-body-inner">
                                 <ul>
-                                    <li>Led a team of 3 building a QA platform for 2,000+ users, with 11 plugin integrations and OAuth 2.0.</li>
-                                    <li>Migrated 1,000+ records from Postgres to MySQL with zero data loss.</li>
-                                    <li>Deployed the full stack with Docker, Kubernetes, and AWS at 99.9% uptime.</li>
+                                    <li>Led a team of 3 building Support.Bible, Paratext's community Q&amp;A site for 2,000+ users, with Google and Facebook sign-in (OAuth 2.0), spam protection, and 11 plugin integrations.</li>
+                                    <li>Migrated the site's database from PostgreSQL to MySQL with zero data loss.</li>
+                                    <li>Deployed the full stack on AWS with Docker and Kubernetes.</li>
                                 </ul>
                                 <p class="tags">OAuth 2.0 · MySQL · Docker · Kubernetes · AWS</p>
                             </div>
@@ -214,7 +217,7 @@
                         <div class="job-body" id="job-bank">
                             <div class="job-body-inner">
                                 <ul>
-                                    <li>Built a cross-platform employee portal in React and Node.js for 2,000+ users, cutting load time by 40%.</li>
+                                    <li>Built a cross-platform employee portal in React and Node.js for 2,000+ users, cutting load time by 40% through caching.</li>
                                 </ul>
                                 <p class="tags">React · Node.js</p>
                             </div>
@@ -264,7 +267,7 @@
                             <span class="project-num">04</span>
                             <span class="project-main">
                                 <span class="project-name">Support.Bible</span>
-                                <span class="project-desc">The Q&amp;A support forum from my Jaars internship: migrated from Postgres to MySQL, added OAuth 2.0 sign-in, and redeployed with Docker on AWS.</span>
+                                <span class="project-desc">The Q&amp;A support forum from my JAARS internship: migrated from PostgreSQL to MySQL, added OAuth 2.0 sign-in, and redeployed with Docker on AWS.</span>
                                 <span class="tags">MySQL · OAuth 2.0 · Docker · AWS</span>
                             </span>
                             <svg class="project-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg>
@@ -309,7 +312,7 @@
                         <span class="row-key">2025 – 2027</span>
                         <div>
                             <h3>Master's in Computer Science</h3>
-                            <p>Vanderbilt University</p>
+                            <p>Vanderbilt University · GPA 3.90/4.00</p>
                         </div>
                     </li>
                     <li class="row">
@@ -325,10 +328,11 @@
             <section class="section" id="skills" aria-labelledby="skills-title">
                 <h2 class="section-label" id="skills-title"><span class="idx">06</span>Skills</h2>
                 <dl class="rows">
-                    <div class="row"><dt class="row-key">Languages</dt><dd>Python, Java, C#, TypeScript, JavaScript, SQL (PostgreSQL, MySQL), Swift</dd></div>
-                    <div class="row"><dt class="row-key">AI &amp; ML</dt><dd>PyTorch, scikit-learn, NumPy, LLMs (RAG, prompt engineering, LangChain), deep learning</dd></div>
-                    <div class="row"><dt class="row-key">Cloud</dt><dd>AWS (EC2, S3, Lambda, ECS, Bedrock), Docker, Kubernetes, CI/CD, Git</dd></div>
-                    <div class="row"><dt class="row-key">Backend</dt><dd>Node.js, FastAPI, .NET, RESTful APIs, OAuth 2.0, Agile/Scrum</dd></div>
+                    <div class="row"><dt class="row-key">Languages</dt><dd>Python, C#, Java, TypeScript, JavaScript, SQL</dd></div>
+                    <div class="row"><dt class="row-key">Backend</dt><dd>.NET, FastAPI, Node.js, React, REST APIs, asyncio, OAuth 2.0</dd></div>
+                    <div class="row"><dt class="row-key">AI &amp; ML</dt><dd>PyTorch, PyTorch Geometric, scikit-learn, graph neural networks, LLMs, vLLM, RAG</dd></div>
+                    <div class="row"><dt class="row-key">Cloud</dt><dd>AWS (Lambda, ECS, EC2, S3, Bedrock, Transcribe, CDK), Docker, Kubernetes, CI/CD</dd></div>
+                    <div class="row"><dt class="row-key">Data &amp; tools</dt><dd>PostgreSQL, MySQL, SQLite, Git</dd></div>
                 </dl>
             </section>
 
