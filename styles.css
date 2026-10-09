@@ -337,6 +337,8 @@ kbd {
 .job-body li { position: relative; padding-left: 20px; font-size: 15px; line-height: 1.6; }
 .job-body li::before { content: ""; position: absolute; top: 0.8em; left: 2px; width: 8px; height: 1px; background: var(--ink-3); }
 .job-body .tags { margin: 14px 0 26px; }
+.job-links { margin: -10px 0 22px; }
+.job-links .inline-link { margin-top: 0; }
 
 .js .job-body { display: grid; grid-template-rows: 0fr; transition: grid-template-rows 0.45s var(--ease); }
 .js .job[data-open] .job-body { grid-template-rows: 1fr; }
@@ -578,6 +580,7 @@ kbd {
     .job-summary { grid-column: 2; }
     .job-toggle { grid-column: 3; }
     .job-body-inner { padding-left: 168px; }
+    .job-links { padding-left: 168px; }
 
     .project { grid-template-columns: 56px 1fr 20px; grid-template-areas: "num main arrow"; }
     .project-num { margin: 0; padding-top: 10px; }
